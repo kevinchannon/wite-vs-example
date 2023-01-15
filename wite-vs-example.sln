@@ -12,6 +12,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{8F8ECB80-3CDD-4DEA-9608-70760E21AA5E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{D27B9D46-D1E5-4F9A-96BA-F66D7744913F}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\build_and_test_windows_msvc_x64_debug.yml = .github\workflows\build_and_test_windows_msvc_x64_debug.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +38,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D27B9D46-D1E5-4F9A-96BA-F66D7744913F} = {8F8ECB80-3CDD-4DEA-9608-70760E21AA5E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {126D6BD4-3E1E-4DE3-A7DC-DB0A12120544}

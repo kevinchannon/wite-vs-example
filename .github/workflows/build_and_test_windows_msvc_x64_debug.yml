@@ -1,0 +1,30 @@
+name: "Windows | MSVC++ | x64 | Debug "
+
+on:
+  push:
+    branches: [ "master" ]
+    paths:
+      - wite-vs-example/**
+      - .github/workflows/build_and_test_windows_msvc_x64_debug.yml
+  pull_request:
+    branches: [ "master" ]
+    paths:
+      - wite-vs-example/**
+      - .github/workflows/build_and_test_windows_msvc_x64_debug.yml
+
+env:
+  BUILD_TYPE: Debug
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ilammy/msvc-dev-cmd@v1
+
+      - name: Build
+        run: msbuild wite-vs-example.sln /p:Configuration=Debug
+
+      - name: Test
+        shell: cmd
+        run: ${{github.workspace}}\x64\Debug\wite-vs-example.exe
