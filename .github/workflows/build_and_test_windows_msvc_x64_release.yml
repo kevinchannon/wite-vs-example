@@ -1,0 +1,33 @@
+name: "Windows | MSVC++ | x64 | Release "
+
+on:
+  push:
+    branches: [ "master" ]
+    paths:
+      - wite-vs-example/**
+      - .github/workflows/build_and_test_windows_msvc_x64_release.yml
+  pull_request:
+    branches: [ "master" ]
+    paths:
+      - wite-vs-example/**
+      - .github/workflows/build_and_test_windows_msvc_x64_release.yml
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ilammy/msvc-dev-cmd@v1
+
+      - name: Restore NuGet packages
+        run: nuget restore wite-vs-example.sln
+
+      - name: Build
+        run: msbuild wite-vs-example.sln /p:Configuration=Release
+
+      - name: Test
+        shell: cmd
+        run: ${{github.workspace}}\x64\Release\wite-vs-example.exe

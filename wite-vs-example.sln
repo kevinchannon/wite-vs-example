@@ -17,6 +17,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{D27B9D46-D1E5-4F9A-96BA-F66D7744913F}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\build_and_test_windows_msvc_x64_debug.yml = .github\workflows\build_and_test_windows_msvc_x64_debug.yml
+		.github\workflows\build_and_test_windows_msvc_x64_release.yml = .github\workflows\build_and_test_windows_msvc_x64_release.yml
 	EndProjectSection
 EndProject
 Global
