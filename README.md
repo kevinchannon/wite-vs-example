@@ -1,3 +1,6 @@
+![Windows | MSVC++ | x64 | Debug](https://github.com/kevinchannon/wite-vs-example/actions/workflows/build_and_test_windows_msvc_x64_debug.yml/badge.svg)<br>
+![Windows | MSVC++ | x64 | Release](https://github.com/kevinchannon/wite-vs-example/actions/workflows/build_and_test_windows_msvc_x64_release.yml/badge.svg)
+
 # wite-vs-example
 A simple example Visual Studio project that uses Wite as a dependency via NuGet.
 
