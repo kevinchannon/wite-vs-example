@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\wite.0.15.0\build\native\wite.props" Condition="Exists('..\packages\wite.0.15.0\build\native\wite.props')" />
+  <Import Project="..\packages\wite.1.0.0\build\native\wite.props" Condition="Exists('..\packages\wite.1.0.0\build\native\wite.props')" />
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -140,13 +140,13 @@
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\packages\wite.0.15.0\build\native\wite.targets" Condition="Exists('..\packages\wite.0.15.0\build\native\wite.targets')" />
+    <Import Project="..\packages\wite.1.0.0\build\native\wite.targets" Condition="Exists('..\packages\wite.1.0.0\build\native\wite.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\wite.0.15.0\build\native\wite.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\wite.0.15.0\build\native\wite.props'))" />
-    <Error Condition="!Exists('..\packages\wite.0.15.0\build\native\wite.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\wite.0.15.0\build\native\wite.targets'))" />
+    <Error Condition="!Exists('..\packages\wite.1.0.0\build\native\wite.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\wite.1.0.0\build\native\wite.props'))" />
+    <Error Condition="!Exists('..\packages\wite.1.0.0\build\native\wite.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\wite.1.0.0\build\native\wite.targets'))" />
   </Target>
 </Project>
